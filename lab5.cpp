@@ -20,6 +20,7 @@ int main()
         std::cout << elem << std::endl;
 
     /* ZADANIE 12 */
+    
     std::cout << std::endl << "Wektor osob:" << std::endl;
     std::vector< Human > human_vector;
     bool                 end = false;
