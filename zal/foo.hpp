@@ -11,7 +11,7 @@ std::vector< char > foo(std::list< Human >& people)
     std::vector< char > wektor;
     std::list< Human >::reverse_iterator rit;
 
-    for (rit = people.rbegin(); rit != people.rend(); crit++)
+    for (rit = people.rbegin(); rit != people.rend(); rit++)
     {   
       rit->birthday();
       if(rit->isMonster())
