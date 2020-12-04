@@ -7,6 +7,14 @@
 
 std::vector< char > foo(std::list< Human >& people)
 {
-    // Twoja implementacja tutaj
-    return {};
+    std::vector< char > wektor;
+    for(Human& human : people)
+    {
+      human.birthday();
+      if(human.isMonster())
+        wektor.push_back('n');
+      else
+        wektor.push_back('y');
+    }
+    return wektor;
 }
