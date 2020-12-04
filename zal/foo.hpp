@@ -8,10 +8,10 @@
 std::vector< char > foo(std::list< Human >& people)
 {
     std::vector< char > wektor;
-    for(Human& human : people)
+    for(Human human : people)
     {
-      human.birthday();
-      if(human.isMonster())
+      human->birthday();
+      if(human->isMonster())
         wektor.push_back('n');
       else
         wektor.push_back('y');

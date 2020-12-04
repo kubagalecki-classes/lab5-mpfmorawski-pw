@@ -20,7 +20,7 @@ int main()
         std::cout << elem << std::endl;
 
     /* ZADANIE 12 */
-    
+
     std::cout << std::endl << "Wektor osob:" << std::endl;
     std::vector< Human > human_vector;
     bool                 end = false;
@@ -52,9 +52,10 @@ int main()
             std::cout << std::endl << "Koniec" << std::endl;
             std::cout << "human_vector size: " << human_vector.size() << std::endl;
             std::cout << "human_vector capacity: " << human_vector.capacity() << std::endl;
-            return 0;
+            break;
         }
     }
+    return 0;
 }
 
 /* Po uruchomieniu otrzymano:
