@@ -13,8 +13,8 @@ std::vector< char > foo(std::list< Human >& people)
 
     for (crit = people.rbegin(); crit != people.rend(); crit++)
     {   
-      it->birthday();
-      if(it->isMonster())
+      crit->birthday();
+      if(crit->isMonster())
         wektor.push_back('n');
       else
         wektor.push_back('y');
