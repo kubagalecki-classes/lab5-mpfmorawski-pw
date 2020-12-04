@@ -19,5 +19,6 @@ std::vector< char > foo(std::list< Human >& people)
       else
         wektor.push_back('y');
     }
+    
     return wektor;
 }
