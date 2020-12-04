@@ -13,29 +13,31 @@ int main()
     std::cout << "Adres pierwszego:\t" << &lista.front() << std::endl;
     std::cout << "Adres ostatniego:\t" << &lista.back() << std::endl;
     std::cout << std::endl;
-    std::cout << "std::vector" << std::endl;
-    std::vector< int > wektor(2, 1);
-    std::cout << "Pierwszy:\t" << wektor[0] << std::endl;
-    std::cout << "Ostatni:\t" << wektor[1] << std::endl;
-    std::cout << "Adres pierwszego:\t" << &wektor[0] << std::endl;
-    std::cout << "Adres ostatniego:\t" << &wektor[1] << std::endl;
+    lista.push_front(1);
+    lista.push_front(12);
+    lista.push_front(-3);
+    std::cout << "Do listy dodano kilka elementow na poczatku" << std::endl;
+    std::cout << "Pierwszy:\t" << lista.front() << std::endl;
+    std::cout << "Ostatni:\t" << lista.back() << std::endl;
+    std::cout << "Adres pierwszego:\t" << &lista.front() << std::endl;
+    std::cout << "Adres ostatniego:\t" << &lista.back() << std::endl;
 
     return 0;
 }
 
-/* 
-Adresy pierwszego i ostatniego elementu listy są od siebie dalej niż dla analogicznie utworzonego wektora.
+/*
+Adres ostatniego elementu nie zmienił się. Jest to związane ze strukturą listy, która składa się z węzłów. Dopisując węzły na przód, nie zmieniamy "położenia" w pamięci ostatniego elementu.
 
 Po uruchomieniu otrzymano:
   std::list
   Pierwszy:   7
   Ostatni:    4
-  Adres pierwszego:   0x55ec1146c2b0
-  Adres ostatniego:   0x55ec1146c290
+  Adres pierwszego:   0x5556a3a3f2b0
+  Adres ostatniego:   0x5556a3a3f290
 
-  std::vector
-  Pierwszy:   1
-  Ostatni:    1
-  Adres pierwszego:   0x55ec1146c2c0
-  Adres ostatniego:   0x55ec1146c2c4
+  Do listy dodano kilka elementow na poczatku
+  Pierwszy:   -3
+  Ostatni:    4
+  Adres pierwszego:   0x5556a3a3f310
+  Adres ostatniego:   0x5556a3a3f290
 */
