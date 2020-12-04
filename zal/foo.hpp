@@ -4,14 +4,17 @@
 
 #include <list>
 #include <vector>
+#include <iterator>
 
 std::vector< char > foo(std::list< Human >& people)
 {
     std::vector< char > wektor;
-    for(Human human : people)
-    {
-      human->birthday();
-      if(human->isMonster())
+    std::list< int >::const_reverse_iterator crit;
+
+    for (crit = people.rbegin(); crit != people.rend(); crit++)
+    {   
+      it->birthday();
+      if(it->isMonster())
         wektor.push_back('n');
       else
         wektor.push_back('y');
