@@ -9,12 +9,12 @@
 std::vector< char > foo(std::list< Human >& people)
 {
     std::vector< char > wektor;
-    std::list< int >::const_reverse_iterator crit;
+    std::list< Human >::reverse_iterator rit;
 
-    for (crit = people.rbegin(); crit != people.rend(); crit++)
+    for (rit = people.rbegin(); crit != people.rend(); crit++)
     {   
-      crit->birthday();
-      if(crit->isMonster())
+      rit->birthday();
+      if(rit->isMonster())
         wektor.push_back('n');
       else
         wektor.push_back('y');
